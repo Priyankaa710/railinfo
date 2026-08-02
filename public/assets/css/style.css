@@ -1,0 +1,273 @@
+/* =========================================================
+   RailInfo — GovTech Portal Theme
+   ========================================================= */
+
+:root {
+  --ri-navy: #0b2447;
+  --ri-blue: #114b9c;
+  --ri-blue-light: #1a73c0;
+  --ri-blue-pale: #eaf2fc;
+  --ri-accent: #ff9933;
+  --ri-green: #1e8e3e;
+  --ri-amber: #b7791f;
+  --ri-red: #c62828;
+  --ri-ink: #16213e;
+  --ri-muted: #5c6b82;
+  --ri-border: #dbe4f0;
+  --ri-radius: 14px;
+  --ri-shadow: 0 10px 30px rgba(11, 36, 71, 0.08);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  color: var(--ri-ink);
+  background: #f6f9fd;
+  font-family: "Inter", sans-serif;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Top government strip ---------- */
+.ri-topbar {
+  background: var(--ri-navy);
+  color: #cfe0f7;
+  font-size: 0.8rem;
+  padding: 6px 0;
+}
+.ri-topbar a { color: #cfe0f7; }
+.ri-topbar a:hover { color: #fff; }
+
+/* ---------- Navbar ---------- */
+.ri-navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--ri-border);
+  padding: 0.65rem 0;
+  box-shadow: 0 2px 12px rgba(11,36,71,0.04);
+}
+.ri-brand { display: flex; align-items: center; gap: 0.6rem; }
+.ri-brand__icon {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--ri-blue), var(--ri-navy));
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  font-size: 1.15rem;
+}
+.ri-brand__text {
+  font-weight: 800;
+  color: var(--ri-navy);
+  font-size: 1.25rem;
+  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+}
+.ri-brand__text small { font-weight: 500; font-size: 0.62rem; color: var(--ri-muted); text-transform: uppercase; letter-spacing: .04em; }
+.ri-brand--footer .ri-brand__text { color: #fff; }
+
+.ri-navbar .nav-link { color: var(--ri-ink); font-weight: 600; font-size: 0.93rem; padding: .5rem .9rem !important; border-radius: 8px; transition: all .15s ease; }
+.ri-navbar .nav-link:hover { background: var(--ri-blue-pale); color: var(--ri-blue); }
+
+.ri-btn-primary {
+  background: linear-gradient(135deg, var(--ri-blue-light), var(--ri-blue));
+  border: none; color: #fff; font-weight: 600; border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(17,75,156,0.28);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.ri-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(17,75,156,0.34); color:#fff; }
+
+.ri-btn-outline {
+  border: 1.5px solid var(--ri-blue); color: var(--ri-blue); font-weight: 600; border-radius: 10px; background: #fff;
+  transition: all .15s ease;
+}
+.ri-btn-outline:hover { background: var(--ri-blue); color: #fff; }
+
+.ri-btn-outline-light {
+  border: 1.5px solid rgba(255,255,255,.6); color: #fff; font-weight: 600; border-radius: 10px;
+}
+.ri-btn-outline-light:hover { background: rgba(255,255,255,.15); color:#fff; }
+
+/* ---------- Hero ---------- */
+.ri-hero {
+  background: radial-gradient(circle at top right, #163a72 0%, var(--ri-navy) 55%, #081428 100%);
+  color: #fff;
+  padding: 5rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.ri-eyebrow {
+  display: inline-block; background: rgba(255,153,51,0.15); color: var(--ri-accent);
+  padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.78rem; letter-spacing: .03em;
+  margin-bottom: 1rem;
+}
+.ri-hero__title { font-size: 2.6rem; font-weight: 800; line-height: 1.15; }
+.ri-hero__subtitle { color: #cfe0f7; font-size: 1.05rem; max-width: 540px; margin-top: 1rem; }
+.ri-hero__stats { display: flex; gap: 2.2rem; margin-top: 2.5rem; flex-wrap: wrap; }
+.ri-hero__stats strong { display: block; font-size: 1.5rem; font-weight: 800; }
+.ri-hero__stats span { font-size: 0.8rem; color: #a9c3e6; }
+.ri-hero__art {
+  height: 280px; display: flex; align-items: center; justify-content: center;
+  font-size: 11rem; color: rgba(255,255,255,0.08);
+}
+
+/* ---------- Search Card ---------- */
+.ri-quick-search { margin-top: -3.5rem; position: relative; z-index: 5; margin-bottom: 3rem; }
+.ri-card { border: 1px solid var(--ri-border); border-radius: var(--ri-radius); background: #fff; }
+.ri-search-card { border-radius: 18px; }
+.ri-tabs .nav-link { border: none; color: var(--ri-muted); font-weight: 700; padding: .75rem 1.25rem; }
+.ri-tabs .nav-link.active { color: var(--ri-blue); border-bottom: 3px solid var(--ri-blue); background: transparent; }
+
+.form-label { font-weight: 600; font-size: 0.85rem; color: var(--ri-ink); }
+.form-control, .input-group-text { border-color: var(--ri-border); }
+.form-control:focus { border-color: var(--ri-blue-light); box-shadow: 0 0 0 0.2rem rgba(26,115,192,0.15); }
+
+.ri-suggestions {
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 40;
+  background: #fff; border: 1px solid var(--ri-border); border-radius: 10px;
+  box-shadow: var(--ri-shadow); margin-top: 4px; max-height: 260px; overflow-y: auto; display: none;
+}
+.ri-suggestions.show { display: block; }
+.ri-suggestions .item { padding: 10px 14px; cursor: pointer; font-size: 0.9rem; }
+.ri-suggestions .item:hover, .ri-suggestions .item.active { background: var(--ri-blue-pale); }
+.ri-suggestions .item small { color: var(--ri-muted); display: block; }
+
+/* ---------- Sections ---------- */
+.ri-section { padding: 3rem 0; }
+.ri-section--muted { background: #eef4fc; }
+.ri-section__title { font-weight: 800; color: var(--ri-navy); font-size: 1.5rem; }
+.ri-link-more { color: var(--ri-blue); font-weight: 700; font-size: 0.9rem; }
+.ri-link-more:hover { color: var(--ri-navy); }
+
+.ri-page-header {
+  background: linear-gradient(120deg, var(--ri-blue-pale), #fff);
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--ri-border);
+}
+.ri-page-header h1 { font-weight: 800; color: var(--ri-navy); font-size: 1.9rem; }
+.ri-page-header p { color: var(--ri-muted); margin-bottom: 0; }
+.ri-breadcrumb { font-size: 0.85rem; }
+
+/* ---------- Route cards ---------- */
+.ri-route-card {
+  display: flex; flex-direction: column; gap: .75rem;
+  background: #fff; border: 1px solid var(--ri-border); border-radius: 12px; padding: 1.1rem;
+  height: 100%; transition: all .18s ease; box-shadow: 0 2px 8px rgba(11,36,71,0.03);
+}
+.ri-route-card:hover { box-shadow: var(--ri-shadow); transform: translateY(-3px); border-color: var(--ri-blue-light); }
+.ri-route-card__cities { display: flex; align-items: center; justify-content: space-between; gap: .5rem; color: var(--ri-ink); font-weight: 700; }
+.ri-route-card__cities i { color: var(--ri-accent); }
+.ri-route-card__cities small { display: block; color: var(--ri-muted); font-weight: 500; font-size: 0.72rem; }
+.ri-route-card__cta { color: var(--ri-blue); font-weight: 600; font-size: 0.85rem; }
+
+/* ---------- Feature cards ---------- */
+.ri-feature-card { background: #fff; border: 1px solid var(--ri-border); border-radius: var(--ri-radius); padding: 1.75rem; height: 100%; }
+.ri-feature-card__icon {
+  width: 52px; height: 52px; border-radius: 12px; background: var(--ri-blue-pale); color: var(--ri-blue);
+  display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;
+}
+.ri-feature-card h5 { font-weight: 700; color: var(--ri-navy); }
+.ri-feature-card p { color: var(--ri-muted); margin-bottom: 0; font-size: 0.92rem; }
+
+/* ---------- Tables ---------- */
+.ri-table-wrap { border: 1px solid var(--ri-border); border-radius: var(--ri-radius); overflow: hidden; background: #fff; }
+.ri-table { margin-bottom: 0; }
+.ri-table thead { background: var(--ri-blue-pale); }
+.ri-table thead th { color: var(--ri-navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: .03em; font-weight: 700; border-bottom: none; padding: 14px 16px; white-space: nowrap; }
+.ri-table tbody td { padding: 14px 16px; border-color: var(--ri-border); font-size: 0.92rem; }
+.ri-table tbody tr:hover { background: #f8fbff; }
+
+/* Mobile horizontal scroll for wide tables */
+@media (max-width: 991.98px) {
+  .ri-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .ri-table { min-width: 820px; }
+}
+
+/* ---------- Seat / status badges ---------- */
+.ri-seat-pill {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 700;
+}
+.ri-seat-pill--good { background: #e3f6e9; color: var(--ri-green); }
+.ri-seat-pill--low { background: #fdf1de; color: var(--ri-amber); }
+.ri-seat-pill--full { background: #fbe4e4; color: var(--ri-red); }
+
+.badge.ri-badge-status { font-weight: 700; padding: 6px 12px; border-radius: 999px; }
+.ri-badge-status--success { background: #e3f6e9; color: var(--ri-green); }
+.ri-badge-status--warning { background: #fdf1de; color: var(--ri-amber); }
+.ri-badge-status--danger  { background: #fbe4e4; color: var(--ri-red); }
+.ri-badge-status--secondary { background: #eef1f6; color: var(--ri-muted); }
+
+.badge.ri-badge-cache { background: var(--ri-blue-pale); color: var(--ri-blue); font-weight: 700; padding: 6px 12px; border-radius: 999px; }
+.badge.ri-badge-govt { background: rgba(255,255,255,.08); color: #cfe0f7; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.15); }
+.badge.ri-badge-day-active { background: var(--ri-blue); color: #fff; padding: 7px 12px; border-radius: 999px; font-weight: 700; }
+.badge.ri-badge-day-inactive { background: #eef1f6; color: var(--ri-muted); padding: 7px 12px; border-radius: 999px; font-weight: 600; }
+
+/* ---------- Train cards (mobile list) ---------- */
+.ri-train-card {
+  display: block; background: #fff; border: 1px solid var(--ri-border); border-radius: var(--ri-radius);
+  padding: 1.1rem; position: relative; box-shadow: 0 2px 8px rgba(11,36,71,0.03); transition: box-shadow .15s ease;
+}
+.ri-train-card:hover { box-shadow: var(--ri-shadow); }
+.ri-train-card__head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.9rem; }
+.ri-train-card__times { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.ri-train-card__times div { text-align: center; }
+.ri-train-card__times strong { display: block; font-size: 1.05rem; color: var(--ri-navy); }
+.ri-train-card__times span { font-size: 0.75rem; color: var(--ri-muted); }
+.ri-train-card__duration { color: var(--ri-blue); }
+.ri-train-card__duration i { font-size: 1.1rem; }
+.ri-train-card__duration small { display: block; font-size: 0.7rem; color: var(--ri-muted); }
+.ri-train-card__times--lg strong { font-size: 1.4rem; }
+
+.ri-seat-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.ri-seat-chip {
+  flex: 1 1 calc(50% - 8px); border-radius: 10px; padding: 8px 10px; font-size: 0.78rem;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.ri-seat-chip__class { font-weight: 700; }
+.ri-seat-chip--good { background: #e3f6e9; color: var(--ri-green); }
+.ri-seat-chip--low { background: #fdf1de; color: var(--ri-amber); }
+.ri-seat-chip--full { background: #fbe4e4; color: var(--ri-red); }
+
+/* ---------- PNR card ---------- */
+.ri-pnr-card { position: relative; }
+.ri-pnr-meta__label { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .03em; color: var(--ri-muted); font-weight: 700; }
+.ri-pnr-meta__value { display: block; font-weight: 700; color: var(--ri-navy); font-size: 1rem; }
+.ri-pnr-input { letter-spacing: 0.2em; font-weight: 700; }
+
+.ri-note {
+  background: var(--ri-blue-pale); border: 1px solid #cfe0f7; color: var(--ri-navy);
+  border-radius: 10px; padding: 12px 16px; font-size: 0.88rem;
+}
+
+/* ---------- Empty state ---------- */
+.ri-empty-state { text-align: center; padding: 4rem 1rem; }
+.ri-empty-state i { font-size: 3.5rem; color: var(--ri-blue-light); opacity: .6; }
+.ri-empty-state h4 { margin-top: 1rem; color: var(--ri-navy); font-weight: 700; }
+
+/* ---------- Alerts ---------- */
+.ri-alert { border-radius: 12px; border: none; }
+
+/* ---------- Footer ---------- */
+.ri-footer { background: var(--ri-navy); color: #b9cbe8; padding: 3.5rem 0 1.5rem; margin-top: 2rem; }
+.ri-footer__desc { font-size: 0.88rem; color: #a9c3e6; }
+.ri-footer__badges { display: flex; gap: 8px; }
+.ri-footer__heading { color: #fff; font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; }
+.ri-footer__links li { margin-bottom: 8px; font-size: 0.88rem; }
+.ri-footer__links a { color: #a9c3e6; }
+.ri-footer__links a:hover { color: #fff; }
+.ri-footer__divider { border-color: rgba(255,255,255,0.12); margin: 2rem 0 1rem; }
+.ri-footer__bottom { font-size: 0.8rem; color: #7f97bc; }
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 767.98px) {
+  .ri-hero { padding: 3rem 0 2.5rem; text-align: center; }
+  .ri-hero__title { font-size: 1.9rem; }
+  .ri-hero__subtitle { margin-left: auto; margin-right: auto; }
+  .ri-hero__stats { justify-content: center; }
+  .ri-hero__art { display: none; }
+  .ri-quick-search { margin-top: -2rem; }
+  .ri-search-card .card-body { padding: 1.5rem !important; }
+}
+
+@media (max-width: 575.98px) {
+  .ri-seat-chip { flex: 1 1 100%; }
+  .ri-page-header h1 { font-size: 1.5rem; }
+}

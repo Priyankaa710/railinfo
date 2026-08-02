@@ -1,0 +1,22 @@
+{
+    "name": "railinfo/portal",
+    "description": "RailInfo - Train Schedule Checker & PNR Status Tracker Portal",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "codeigniter4/framework": "^4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "CodeIgniter\\ComposerScripts::postUpdate"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

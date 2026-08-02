@@ -1,0 +1,15 @@
+# RailInfo — Root .htaccess
+# On shared hosting (e.g. Hostinger) where the document root cannot be
+# changed to /public, this rewrites all requests into the public/ folder
+# so that the rest of the CI4 application stays outside the web root.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # If the request is not already for /public/..., send it there.
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L]
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes

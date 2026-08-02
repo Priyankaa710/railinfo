@@ -1,0 +1,33 @@
+#--------------------------------------------------------------------
+# RailInfo Portal - Environment Configuration
+# Rename this file to ".env" after upload (Hostinger hides dot-files
+# in the file manager, so upload via FTP or use "Show Hidden Files").
+#--------------------------------------------------------------------
+
+CI_ENVIRONMENT = production
+
+app.baseURL = 'https://yourdomain.com/'
+
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+database.default.hostname = localhost
+database.default.database = u123456789_railinfo
+database.default.username = u123456789_rail
+database.default.password = CHANGE_ME
+database.default.DBDriver = MySQLi
+database.default.port     = 3306
+
+#--------------------------------------------------------------------
+# EXTERNAL RAILWAY API (used by TrainController / PNRController)
+#--------------------------------------------------------------------
+railapi.baseURL = https://api.example-rail-provider.com/
+railapi.key     = YOUR_API_KEY_HERE
+
+#--------------------------------------------------------------------
+# SESSION
+#--------------------------------------------------------------------
+session.driver         = CodeIgniter\Session\Handlers\FileHandler
+session.cookieName     = railinfo_session
+session.expiration     = 7200
+session.savePath       = writable/session
